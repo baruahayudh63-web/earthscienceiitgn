@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Earth Sciences | IIT Gandhinagar</title>
+  <meta name="description" content="Contact the Department of Earth Sciences at IIT Gandhinagar — address, location map, email inquiry, and office details.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Depth HUD -->
+  <div class="depth-hud" id="depth-hud">
+    <div class="depth-hud-icon"></div>
+    <div>
+      <div>Strata: <span id="depth-layer" style="color: var(--bone)">Topsoil</span></div>
+      <div>Depth: <span class="depth-hud-val" id="depth-val">0m</span></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo-container">
+      <img src="assets/iitgnlogo-emblem.png" alt="IIT Gandhinagar Emblem" class="logo-badge-img">
+      <div class="logo-text">
+        <span class="logo-title">Earth Sciences</span>
+        <span class="logo-sub">IIT Gandhinagar</span>
+      </div>
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="nav-cta active">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Banner -->
+  <header style="padding: 4rem 6% 2rem; max-width: 1200px; margin: 0 auto;">
+    <div class="eyebrow">Get In Touch</div>
+    <h1 style="font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1rem; color: var(--text-dark);">
+      Contact Department
+    </h1>
+    <p class="sub" style="font-size: 1.15rem; max-width: 70ch; opacity: 0.9;">
+      Have questions regarding admissions, research collaborations, or laboratory facilities? Reach out to our office.
+    </p>
+  </header>
+
+  <!-- Contact Content Grid -->
+  <section class="content">
+    <div class="about-grid">
+      <!-- Contact Info Card -->
+      <div style="background: rgba(122, 82, 51, 0.15); padding: 2.5rem; border-radius: var(--radius-md); border: 1px solid rgba(185, 137, 94, 0.3);">
+        <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--text-dark);">
+          Department Office Location
+        </h2>
+        
+        <div style="margin-bottom: 1.5rem;">
+          <strong style="color: var(--layer-mud-dark); display: block; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Address:</strong>
+          <p style="font-size: 1.05rem; line-height: 1.6;">
+            Department of Earth Sciences<br>
+            Academic Block 6, Room 301<br>
+            Indian Institute of Technology Gandhinagar<br>
+            Palaj, Gandhinagar - 382355, Gujarat, India
+          </p>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <strong style="color: var(--layer-mud-dark); display: block; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Email Inquiries:</strong>
+          <p style="font-size: 1.05rem;"><a href="mailto:earthscience@iitgn.ac.in" style="color: var(--layer-mud-dark); font-weight: 600; text-decoration: underline;">earthscience@iitgn.ac.in</a></p>
+        </div>
+
+        <div>
+          <strong style="color: var(--layer-mud-dark); display: block; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Office Hours:</strong>
+          <p style="font-size: 1rem;">Monday – Friday: 9:00 AM – 5:30 PM IST</p>
+        </div>
+      </div>
+
+      <!-- Contact Inquiry Form -->
+      <div style="background: rgba(0, 0, 0, 0.2); padding: 2.5rem; border-radius: var(--radius-md); border: 1px solid rgba(246, 241, 231, 0.15);">
+        <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--bone);">
+          Send an Inquiry
+        </h2>
+
+        <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! Your message has been sent to IITGN Earth Sciences.');">
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; color: var(--bone); font-size: 0.88rem; font-weight: 600; margin-bottom: 0.3rem;">Your Name *</label>
+            <input type="text" required style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid rgba(246,241,231,0.25); background: rgba(0,0,0,0.3); color: var(--text-light); font-family: var(--font-body);">
+          </div>
+
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; color: var(--bone); font-size: 0.88rem; font-weight: 600; margin-bottom: 0.3rem;">Email Address *</label>
+            <input type="email" required style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid rgba(246,241,231,0.25); background: rgba(0,0,0,0.3); color: var(--text-light); font-family: var(--font-body);">
+          </div>
+
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; color: var(--bone); font-size: 0.88rem; font-weight: 600; margin-bottom: 0.3rem;">Inquiry Topic</label>
+            <select style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid rgba(246,241,231,0.25); background: rgba(23,6,0,0.85); color: var(--text-light); font-family: var(--font-body);">
+              <option>M.Sc / M.Tech Admissions</option>
+              <option>Ph.D Application & Fellowships</option>
+              <option>Research Collaboration</option>
+              <option>General Department Inquiry</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; color: var(--bone); font-size: 0.88rem; font-weight: 600; margin-bottom: 0.3rem;">Message *</label>
+            <textarea rows="4" required style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid rgba(246,241,231,0.25); background: rgba(0,0,0,0.3); color: var(--text-light); font-family: var(--font-body);"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%; justify-center: center;">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sediment Strip -->
+  <div class="sediment-strip" aria-hidden="true">
+    <svg class="rock-decor r1" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="10,60 5,35 25,15 55,10 80,20 95,45 85,65 50,68 20,65"/>
+    </svg>
+    <svg class="rock-decor r2" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="8,55 10,30 35,12 65,15 88,35 78,60 45,65 18,62"/>
+    </svg>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Department of Earth Sciences</h3>
+        <p>Indian Institute of Technology Gandhinagar<br>Palaj, Gandhinagar - 382355, Gujarat, India</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>People</h4>
+        <ul>
+          <li><a href="people.html">Faculty Directory</a></li>
+          <li><a href="people.html">M.Tech Students</a></li>
+          <li><a href="people.html">PhD Scholars</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="gallery.html">Photo Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Department of Earth Sciences, Indian Institute of Technology Gandhinagar.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
