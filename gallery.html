@@ -1,170 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photo Gallery & Events | Earth Sciences | IIT Gandhinagar</title>
-  <meta name="description" content="Visual gallery featuring fieldwork expeditions, academic conferences, laboratory research, and student workshops.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <title>Photo Gallery | Earth Sciences | IIT Gandhinagar</title>
+  <meta name="description"
+    content="Explore photos of fieldwork expeditions, workshops, laboratories, and campus events at IIT Gandhinagar Earth Sciences.">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <!-- Floating Depth HUD -->
-  <div class="depth-hud" id="depth-hud">
-    <div class="depth-hud-icon"></div>
-    <div>
-      <div>Strata: <span id="depth-layer" style="color: var(--bone)">Topsoil</span></div>
-      <div>Depth: <span class="depth-hud-val" id="depth-val">0m</span></div>
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <span>📍 IIT Gandhinagar, Palaj, Gujarat 382355</span>
+        <span>|</span>
+        <span>📧 earthsciences@iitgn.ac.in</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="https://iitgn.ac.in" target="_blank">IITGN Portal</a>
+        <a href="academics.html">Admissions 2026</a>
+        <a href="contact.html">Reach Us</a>
+        <span class="top-bar-badge">ANRF CoE Center</span>
+      </div>
     </div>
   </div>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html" class="logo-container">
-      <img src="assets/iitgnlogo-emblem.png" alt="IIT Gandhinagar Emblem" class="logo-badge-img">
-      <div class="logo-text">
-        <span class="logo-title">Earth Sciences</span>
-        <span class="logo-sub">IIT Gandhinagar</span>
-      </div>
-    </a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="academics.html">Academics</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="people.html">People</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-    </ul>
-  </nav>
-
-  <!-- Header Banner -->
-  <header style="padding: 4rem 6% 2rem; max-width: 1200px; margin: 0 auto;">
-    <div class="eyebrow">Department Photography</div>
-    <h1 style="font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1rem; color: var(--text-dark);">
-      Department Photo Gallery
-    </h1>
-    <p class="sub" style="font-size: 1.15rem; max-width: 70ch; opacity: 0.9;">
-      Moments captured from academic training workshops, industrial field visits, international conferences, and student celebrations.
-    </p>
+  <!-- Institutional Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-identity">
+        <img src="assets/iitgnlogo-emblem.png" alt="IIT Gandhinagar Emblem" class="brand-logo-img">
+        <div class="brand-divider"></div>
+        <div class="brand-titles">
+          <span class="brand-dept">Earth Sciences</span>
+          <span class="brand-inst">IIT Gandhinagar</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="academics.html" class="nav-link">Academics</a>
+            <div class="nav-dropdown">
+              <a href="academics.html#msc">M.Sc. Earth Sciences</a>
+              <a href="academics.html#mtech-program">M.Tech. Earth System Science</a>
+              <a href="academics.html#phd-program">Ph.D. Earth Sciences</a>
+              <a href="academics.html#fieldwork">Fieldwork Training</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="research.html" class="nav-link">Research &amp; Labs</a>
+            <div class="nav-dropdown">
+              <a href="research.html#labs">Research Labs</a>
+              <a href="research.html#equipments">Equipment Inventory</a>
+              <a href="research.html#software">Software Inventory</a>
+              <a href="research.html#cif">Central Instrumentation Facility</a>
+              <a href="research.html#centres">Research Centres</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="people.html" class="nav-link">People</a>
+            <div class="nav-dropdown">
+              <a href="people.html?filter=faculty">Faculty</a>
+              <a href="people.html?filter=mtech">M.Tech Students</a>
+              <a href="people.html?filter=phd">PhD Scholars</a>
+              <a href="people.html?filter=pdf">Postdoctoral Fellows</a>
+              <a href="people.html?filter=alumni">Alumni</a>
+              <a href="people.html?filter=staff">Staff</a>
+            </div>
+          </li>
+          <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+          <li><a href="contact.html" class="nav-cta-btn">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Gallery Content -->
-  <section class="content text-light-theme" id="gallery">
-    <div class="gallery-grid">
-      <!-- Attached Workshop Photo 1 -->
-      <div class="gallery-card">
-        <img src="assets/workshop_cert_1.jpg" alt="Workshop Certificate Distribution Ceremony at IIT Gandhinagar Earth Sciences">
-        <div class="gallery-overlay">Workshop Certificate Ceremony — IITGN Lecture Auditorium</div>
+  <!-- Page Hero Banner Template -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Photo Gallery</span>
+      </div>
+      <div class="hero-badge">
+        <span>📸</span> Department Media
+      </div>
+      <h1 class="hero-title">Fieldwork, Laboratories & Events</h1>
+      <p class="hero-subtitle">
+        Visual records of geological field expeditions, student certificate ceremonies, laboratory experiments, and
+        industrial site visits.
+      </p>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Grid Section -->
+  <section class="site-section bg-surface">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-pill">Interactive Lightbox Gallery</span>
+        <h2 class="section-title">Department Photo Archive</h2>
+        <p class="section-subtitle">Click on any image to expand into full-screen high-resolution preview mode.</p>
       </div>
 
-      <!-- Attached Workshop Photo 2 -->
-      <div class="gallery-card">
-        <img src="assets/workshop_cert_2.jpg" alt="Earth Sciences Student & Faculty Seminar Assembly">
-        <div class="gallery-overlay">Department Seminar & Training Program — Class of 2025</div>
-      </div>
+      <div class="gallery-grid">
+        <!-- Attached User Photos -->
+        <div class="gallery-item">
+          <img src="assets/workshop_cert_1.jpg" alt="Workshop Certificate Ceremony at IITGN Auditorium">
+          <div class="gallery-overlay">
+            <div class="gallery-category">Department Events</div>
+            <div class="gallery-caption">Workshop Certificate Distribution Ceremony in IITGN Lecture Hall</div>
+          </div>
+        </div>
 
-      <!-- Official Gallery Photo: ONGC Industrial Visit -->
-      <div class="gallery-card">
-        <img src="assets/c0b53aea-920a-40c4-ae21-28999b16f341-815x611.jpg" alt="Industrial Visit ONGC Vadodara Core Sampling">
-        <div class="gallery-overlay">Industrial Visit — RGL ONGC, Vadodara Core Sampling</div>
-      </div>
+        <!-- Official Fieldwork & Lab Photography -->
+        <div class="gallery-item">
+          <img src="assets/whatsapp20image202025-02-2520at202.25.2220pm-596x397.jpg" alt="Department Group Photograph Outdoors">
+          <div class="gallery-overlay">
+            <div class="gallery-category">Department Events</div>
+            <div class="gallery-caption">Department of Earth Sciences Community Group Photograph</div>
+          </div>
+        </div>
 
-      <!-- Official Gallery Photo: EAGE Conference 2025 -->
-      <div class="gallery-card">
-        <img src="assets/gall5.jpeg" alt="EAGE Conference 2025 Presentation">
-        <div class="gallery-overlay">EAGE International Geosciences Conference 2025</div>
-      </div>
+        <div class="gallery-item">
+          <img src="assets/whatsapp20image202025-09-2120at2011.02.0520pm-596x335.jpeg" alt="Geophysical Data Analysis in the Research Lab">
+          <div class="gallery-overlay">
+            <div class="gallery-category">Research Labs</div>
+            <div class="gallery-caption">Geophysical Data Processing & Interpretation Workstation</div>
+          </div>
+        </div>
 
-      <!-- Official Gallery Photo: Teachers Day Celebration -->
-      <div class="gallery-card">
-        <img src="assets/gall6.jpeg" alt="Teachers Day Celebration Department of Earth Sciences">
-        <div class="gallery-overlay">Teachers' Day Celebration — Faculty & Scholars</div>
-      </div>
+        <div class="gallery-item">
+          <img src="assets/bb37fe24-35f3-46c0-98a7-3cb03a669bff-596x795.jpg" alt="Research Presentation and Academic Collaboration">
+          <div class="gallery-overlay">
+            <div class="gallery-category">Collaborations</div>
+            <div class="gallery-caption">Research Collaboration Presentation, South Indian Ocean Connectivity Project</div>
+          </div>
+        </div>
 
-      <!-- Official Gallery Photo: REEFS Lab Stall -->
-      <div class="gallery-card">
-        <img src="assets/gall7.jpeg" alt="REEFS Lab Stall at CoLab 2025">
-        <div class="gallery-overlay">REEFS Lab Stall — CoLab 2025 Exhibition</div>
-      </div>
+        <div class="gallery-item">
+          <img src="assets/46022ce5-35e7-449a-9b44-9a494ff383b3-596x447.jpg" alt="ONGC Industrial Field Trip">
+          <div class="gallery-overlay">
+            <div class="gallery-category">Industry Visits</div>
+            <div class="gallery-caption">ONGC Laboratories Industrial Training Visit</div>
+          </div>
+        </div>
 
-      <!-- Official Gallery Photo: Tectonics Seminar -->
-      <div class="gallery-card">
-        <img src="assets/whatsapp20image2025-10-2820at201.04.3220am-1256x707.jpg" alt="Nanokinematic Analysis Workshop">
-        <div class="gallery-overlay">Workshop: Nanokinematic Analysis of Deformed Rocks</div>
-      </div>
+        <div class="gallery-item">
+          <img src="assets/gall5.jpeg" alt="EGU Outstanding Student Presentation Award">
+          <div class="gallery-overlay">
+            <div class="gallery-category">Awards & Recognition</div>
+            <div class="gallery-caption">Shekhar Goyal Receiving the EGU Outstanding Student & PhD Candidate Presentation Award, Vienna</div>
+          </div>
+        </div>
 
-      <!-- Official Gallery Photo: Carbon Capture Seminar -->
-      <div class="gallery-card">
-        <img src="assets/whatsapp20image2025-02-2520at202.25.2220pm-596x397.jpg" alt="Seminar: Carbon Capture Utilization and Storage">
-        <div class="gallery-overlay">Seminar: Carbon Capture, Utilization & Storage (CCUS)</div>
+        <div class="gallery-item">
+          <img src="assets/gall6.jpeg" alt="Departmental Seminar Group Photograph">
+          <div class="gallery-overlay">
+            <div class="gallery-category">Department Events</div>
+            <div class="gallery-caption">Departmental Seminar & Guest Lecture Group Photograph</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gall7.jpeg" alt="Structural Geology Guest Lecture">
+          <div class="gallery-overlay">
+            <div class="gallery-category">Department Events</div>
+            <div class="gallery-caption">Guest Lecture: Nanokinematic Analysis of Tectonically Deformed Rocks</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/whatsapp-image-2026-05-11-at-7.50.55-pm.jpeg" alt="Department Group Photograph at IITGN Campus Mural">
+          <div class="gallery-overlay">
+            <div class="gallery-category">Department Events</div>
+            <div class="gallery-caption">Department Group Photograph at the IITGN Campus Mural</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Lightbox Modal -->
-  <div class="modal-overlay" id="modal-overlay">
-    <div class="modal-content">
-      <button class="modal-close" id="modal-close">✕</button>
-      <div class="modal-body">
-        <img src="" id="modal-img" alt="Enlarged gallery view">
-      </div>
-      <div class="modal-caption" id="modal-caption">Caption text</div>
+  <!-- Fullscreen Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <button class="lightbox-close">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="Expanded View">
+      <div class="lightbox-caption"></div>
     </div>
   </div>
 
-  <!-- Sediment Strip -->
-  <div class="sediment-strip" aria-hidden="true">
-    <svg class="rock-decor r1" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="10,60 5,35 25,15 55,10 80,20 95,45 85,65 50,68 20,65"/>
-    </svg>
-    <svg class="rock-decor r2" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="8,55 10,30 35,12 65,15 88,35 78,60 45,65 18,62"/>
-    </svg>
+  <!-- Geological Scroll Depth HUD Widget -->
+  <div class="depth-hud" id="depth-hud">
+    <div class="depth-hud-dot"></div>
+    <div class="depth-hud-text">
+      Strata: <span id="depth-layer">Crust / Topsoil</span> (<span id="depth-val">0m</span>)
+    </div>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>Department of Earth Sciences</h3>
-        <p>Indian Institute of Technology Gandhinagar<br>Palaj, Gandhinagar - 382355, Gujarat, India</p>
+  <!-- Institutional Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">Department of Earth Sciences</div>
+          <div class="footer-brand-subtitle">Indian Institute of Technology Gandhinagar</div>
+          <p style="line-height: 1.6; font-size: 0.875rem;">
+            Advancing fundamental knowledge of Earth systems and providing scientific solutions for natural hazards,
+            climate resilience, and sustainable resource management.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics & Degrees</a></li>
+            <li><a href="research.html">Research & Labs</a></li>
+            <li><a href="people.html">People Directory</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Academic Programs</h4>
+          <ul class="footer-links">
+            <li><a href="academics.html">M.Sc. Earth Sciences</a></li>
+            <li><a href="academics.html">M.Tech. Earth System Science</a></li>
+            <li><a href="academics.html">Ph.D. Earth Sciences</a></li>
+            <li><a href="academics.html">Postdoctoral Research</a></li>
+            <li><a href="academics.html">Fieldwork Training</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Information</h4>
+          <p style="line-height: 1.6; font-size: 0.875rem; margin-bottom: 0.75rem;">
+            📍 Academic Block 5, IIT Gandhinagar<br>
+            Palaj, Gandhinagar, Gujarat - 382355
+          </p>
+          <p style="line-height: 1.6; font-size: 0.875rem;">
+            📧 earthsciences@iitgn.ac.in<br>
+            📞 +91 79 2395 2400
+          </p>
+        </div>
       </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="academics.html">Academics</a></li>
-          <li><a href="research.html">Research</a></li>
-        </ul>
+
+      <div class="footer-bottom">
+        <div>© 2026 Department of Earth Sciences, IIT Gandhinagar. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="https://iitgn.ac.in" target="_blank">IITGN Official Site</a>
+          <a href="contact.html">Location Map</a>
+          <a href="people.html">Faculty Profiles</a>
+        </div>
       </div>
-      <div class="footer-col">
-        <h4>People</h4>
-        <ul>
-          <li><a href="people.html">Faculty Directory</a></li>
-          <li><a href="people.html">M.Tech Students</a></li>
-          <li><a href="people.html">PhD Scholars</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="gallery.html">Photo Gallery</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Department of Earth Sciences, Indian Institute of Technology Gandhinagar.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

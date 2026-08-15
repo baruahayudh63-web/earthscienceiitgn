@@ -1,202 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Department of Earth Sciences | IIT Gandhinagar</title>
-  <meta name="description" content="Department of Earth Sciences at Indian Institute of Technology Gandhinagar — research, academic programs, faculty, and state-of-the-art earth science laboratories.">
-  
-  <!-- Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <meta name="description"
+    content="Department of Earth Sciences at IIT Gandhinagar — Advancing planetary health, geological research, water security, and geoarchaeology.">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <!-- Floating Geological Depth Tracker HUD -->
-  <div class="depth-hud" id="depth-hud" title="Subterranean strata scroll depth tracker">
-    <div class="depth-hud-icon"></div>
-    <div>
-      <div>Strata: <span id="depth-layer" style="color: var(--bone)">Topsoil</span></div>
-      <div>Depth: <span class="depth-hud-val" id="depth-val">0m</span></div>
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <span>📍 IIT Gandhinagar, Palaj, Gujarat 382355</span>
+        <span>|</span>
+        <span>📧 earthsciences@iitgn.ac.in</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="https://iitgn.ac.in" target="_blank">IITGN Portal</a>
+        <a href="academics.html">Admissions 2026</a>
+        <a href="contact.html">Reach Us</a>
+        <span class="top-bar-badge">ANRF CoE Center</span>
+      </div>
     </div>
   </div>
 
-  <!-- Sticky Glassmorphic Navigation -->
-  <nav>
-    <a href="index.html" class="logo-container">
-      <img src="assets/iitgnlogo-emblem.png" alt="IIT Gandhinagar Emblem" class="logo-badge-img">
-      <div class="logo-text">
-        <span class="logo-title">Earth Sciences</span>
-        <span class="logo-sub">IIT Gandhinagar</span>
-      </div>
-    </a>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="academics.html">Academics</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="people.html">People</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-content">
-      <div class="eyebrow">Indian Institute of Technology Gandhinagar</div>
-      <h1>Department of<br>Earth Sciences</h1>
-      <p class="sub">Unravelling the mysteries of planet Earth — from deep lithospheric tectonics and mineral geochemistry to surface river dynamics, climate variability, and geoarchaeology.</p>
-      <div class="hero-actions">
-        <a href="academics.html" class="btn-primary">Explore Programs</a>
-        <a href="research.html" class="btn-secondary">Research Thrusts</a>
-      </div>
-    </div>
-    <div class="hero-media">
-      <img src="assets/c0b53aea-920a-40c4-ae21-28999b16f341-815x611.jpg" alt="IITGN Earth Sciences Geological Fieldwork & Industrial Trip">
-      <div class="hero-media-caption">
-        <strong>Field Geology & Core Sampling</strong> — IITGN faculty and scholars during industrial geology core sampling visit.
-      </div>
+  <!-- Institutional Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-identity">
+        <img src="assets/iitgnlogo-emblem.png" alt="IIT Gandhinagar Emblem" class="brand-logo-img">
+        <div class="brand-divider"></div>
+        <div class="brand-titles">
+          <span class="brand-dept">Earth Sciences</span>
+          <span class="brand-inst">IIT Gandhinagar</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="academics.html" class="nav-link">Academics</a>
+            <div class="nav-dropdown">
+              <a href="academics.html#msc">M.Sc. Earth Sciences</a>
+              <a href="academics.html#mtech-program">M.Tech. Earth System Science</a>
+              <a href="academics.html#phd-program">Ph.D. Earth Sciences</a>
+              <a href="academics.html#fieldwork">Fieldwork Training</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="research.html" class="nav-link">Research &amp; Labs</a>
+            <div class="nav-dropdown">
+              <a href="research.html#labs">Research Labs</a>
+              <a href="research.html#equipments">Equipment Inventory</a>
+              <a href="research.html#software">Software Inventory</a>
+              <a href="research.html#cif">Central Instrumentation Facility</a>
+              <a href="research.html#centres">Research Centres</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="people.html" class="nav-link">People</a>
+            <div class="nav-dropdown">
+              <a href="people.html?filter=faculty">Faculty</a>
+              <a href="people.html?filter=mtech">M.Tech Students</a>
+              <a href="people.html?filter=phd">PhD Scholars</a>
+              <a href="people.html?filter=pdf">Postdoctoral Fellows</a>
+              <a href="people.html?filter=alumni">Alumni</a>
+              <a href="people.html?filter=staff">Staff</a>
+            </div>
+          </li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-cta-btn">Contact Us</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <!-- Statistics Counter Grid -->
-  <div class="stats-wrapper">
-    <section class="stats">
-      <div class="stat-card">
-        <div class="stat-num">20+</div>
-        <div class="stat-label">Faculty & Key Scientists</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">₹16 Cr+</div>
-        <div class="stat-label">External Research Funding</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">850+</div>
-        <div class="stat-label">Peer-Reviewed Publications</div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Highlights & Quick Links Section -->
-  <section class="content">
-    <div class="about-grid">
-      <div class="about-text">
-        <div class="eyebrow">Pioneering Earth System Science</div>
-        <h2 style="font-family: var(--font-heading); font-size: 2.4rem; margin-bottom: 1rem;">Advancing Knowledge & Impact</h2>
-        <p>The Department of Earth Sciences at IIT Gandhinagar builds a quantitative, physics-based understanding of Earth systems. We bridge the gap between ancient geological processes and pressing modern challenges in climate, water, and energy.</p>
-        
-        <ul class="mission-list">
-          <li><strong>M.Sc., M.Tech. & Ph.D. Degrees:</strong> World-class education with fieldwork and lab exposure.</li>
-          <li><strong>Nature Index 2026 5th Rank:</strong> Recognized among India's top academic earth science research departments.</li>
-          <li><strong>ANRF Centre of Excellence:</strong> Leading interdisciplinary research in archaeology and traditional knowledge systems.</li>
-        </ul>
-        <div style="margin-top: 1.5rem;">
-          <a href="about.html" class="btn-primary">Read Full Department Story →</a>
+  <!-- Home Hero Section -->
+  <section class="home-hero">
+    <div class="container home-hero-grid">
+      <div>
+        <div class="hero-badge">
+          <span>🌋</span> Department of Earth Sciences
+        </div>
+        <h1 class="hero-title">
+          Unraveling Earth Dynamics & Natural Processes
+        </h1>
+        <p class="hero-subtitle">
+          Pioneering interdisciplinary research in climate change, hydrogeology, geoarchaeology, structural geology, and
+          river science at Indian Institute of Technology Gandhinagar.
+        </p>
+        <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+          <a href="research.html" class="nav-cta-btn"
+            style="background-color: var(--accent-gold); color: #000 !important; font-size: 1rem; padding: 0.85rem 1.75rem;">Explore
+            Research Labs →</a>
+          <a href="academics.html"
+            style="color: var(--text-light); border: 1px solid rgba(255,255,255,0.3); padding: 0.85rem 1.75rem; border-radius: var(--radius-md); font-weight: 600; font-size: 1rem;">Academic
+            Degrees</a>
         </div>
       </div>
-      <div style="border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); border: 2px solid rgba(185, 137, 94, 0.3);">
-        <img src="assets/whatsapp20image2025-10-2820at201.04.3220am-1256x707.jpg" alt="Earth Sciences Laboratory" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div class="home-hero-card">
+        <img src="assets/whatsapp20image202025-02-2520at202.25.2220pm-596x397.jpg" alt="IITGN Geological Fieldwork" class="home-hero-img">
+        <div class="home-hero-overlay">
+          <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent-gold-light); text-transform: uppercase;">
+            Field Research</div>
+          <div style="font-weight: 700; font-size: 1.1rem; margin-top: 0.25rem;">Himalayan & Peninsular Strata
+            Investigation</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Recent Achievements Spotlights -->
-  <section class="content text-light-theme">
-    <div class="section-header">
-      <div class="eyebrow" style="color: var(--bone); background: rgba(255,255,255,0.1); border-color: var(--bone);">Spotlights</div>
-      <h2>Department Achievements</h2>
-      <p class="section-sub">Celebrating national awards, high-impact journals, and alumni appointments.</p>
-    </div>
+  <!-- Department Highlights & Key Statistics -->
+  <section class="site-section bg-surface">
+    <div class="container">
+      <div class="card-grid-4">
+        <div class="inst-card text-center" style="align-items: center;">
+          <div class="inst-card-icon">🏛️</div>
+          <div
+            style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 800; color: var(--primary-navy);">
+            22+</div>
+          <div style="font-size: 0.875rem; color: var(--text-muted); font-weight: 600;">Faculty Researchers</div>
+        </div>
 
-    <div class="achievements-grid">
-      <div class="achievement-card">
-        <span class="achievement-tag">Nature Index 2026</span>
-        <h3>Ranked 5th in India — Earth & Environmental Sciences</h3>
-        <p>Secured 5th position nationally in Nature Index 2026 rankings for Earth & Environmental Sciences academic journal publications.</p>
-        <a href="https://www.nature.com/nature-index/institution-outputs/generate/earth-and-environmental/countries-India/academic" target="_blank" class="achievement-link">View Nature Index Ranking →</a>
-      </div>
+        <div class="inst-card text-center" style="align-items: center;">
+          <div class="inst-card-icon">🔬</div>
+          <div
+            style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 800; color: var(--primary-navy);">8
+          </div>
+          <div style="font-size: 0.875rem; color: var(--text-muted); font-weight: 600;">Specialized Laboratories</div>
+        </div>
 
-      <div class="achievement-card">
-        <img src="assets/pp201-635x423.png" alt="Prof. V.N. Prabhakar" class="achievement-media-img">
-        <span class="achievement-tag">ANRF National Centre</span>
-        <h3>Centre of Excellence in Archaeology & Knowledge Systems</h3>
-        <p>Funded by ANRF and led by Prof. V. N. Prabhakar, integrating earth sciences, archaeology, and biological engineering.</p>
-      </div>
+        <div class="inst-card text-center" style="align-items: center;">
+          <div class="inst-card-icon">🎓</div>
+          <div
+            style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 800; color: var(--primary-navy);">
+            60+</div>
+          <div style="font-size: 0.875rem; color: var(--text-muted); font-weight: 600;">M.Tech & PhD Scholars</div>
+        </div>
 
-      <div class="achievement-card">
-        <img src="assets/hiren-solanki-4.webp" alt="Hiren Solanki PhD Scholar" class="achievement-media-img">
-        <span class="achievement-tag">Saransh 2025 Winner</span>
-        <h3>National Recognition for Water & Climate Research</h3>
-        <p>PhD Scholar Hiren Solanki honored nationally for machine learning applications in river flow reconstruction and flood forecasting.</p>
+        <div class="inst-card text-center" style="align-items: center;">
+          <div class="inst-card-icon">🌊</div>
+          <div
+            style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 800; color: var(--primary-navy);">
+            ANRF</div>
+          <div style="font-size: 0.875rem; color: var(--text-muted); font-weight: 600;">Centre of Excellence in Water
+          </div>
+        </div>
       </div>
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="about.html" class="btn-secondary">View All Achievements & Spotlights →</a>
     </div>
   </section>
 
-  <!-- Sediment / Rock Strata SVG Decor Strip -->
-  <div class="sediment-strip" aria-hidden="true">
-    <svg class="rock-decor r1" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="10,60 5,35 25,15 55,10 80,20 95,45 85,65 50,68 20,65"/>
-      <polygon points="20,60 15,40 30,25 50,20 40,55" fill="rgba(0,0,0,0.25)"/>
-    </svg>
-    <svg class="rock-decor r2" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="8,55 10,30 35,12 65,15 88,35 78,60 45,65 18,62"/>
-    </svg>
-    <svg class="rock-decor r3" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="10,60 5,35 25,15 55,10 80,20 95,45 85,65 50,68 20,65"/>
-      <polygon points="60,60 55,35 75,22 88,40 78,60" fill="rgba(0,0,0,0.2)"/>
-    </svg>
+  <!-- Core Academic Programs Overview -->
+  <section class="site-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-pill">Academics & Degrees</span>
+        <h2 class="section-title">Rigorous Educational Frameworks</h2>
+        <p class="section-subtitle">We offer world-class postgraduate and doctoral programs combining theoretical rigor
+          with field expeditions and high-tech lab synthesis.</p>
+      </div>
+
+      <div class="card-grid-3">
+        <div class="inst-card">
+          <div class="inst-card-icon">🌐</div>
+          <h3 class="inst-card-title">M.Sc. in Earth Sciences</h3>
+          <p class="inst-card-desc">A 2-year master's program providing foundational and applied insights into geology,
+            geophysics, climate science, and geochemistry.</p>
+          <a href="academics.html" class="inst-card-link">View Curriculum Details →</a>
+        </div>
+
+        <div class="inst-card">
+          <div class="inst-card-icon">⚙️</div>
+          <h3 class="inst-card-title">M.Tech. in Earth System Science</h3>
+          <p class="inst-card-desc">Interdisciplinary engineering and scientific modeling program focused on water
+            resources, climate extremes, and geo-hazards.</p>
+          <a href="academics.html" class="inst-card-link">View M.Tech Structure →</a>
+        </div>
+
+        <div class="inst-card">
+          <div class="inst-card-icon">🏅</div>
+          <h3 class="inst-card-title">Ph.D. Doctoral Program</h3>
+          <p class="inst-card-desc">Advanced original scientific research supported by state-of-the-art instrument
+            infrastructure, international collaborations, and field grants.</p>
+          <a href="academics.html" class="inst-card-link">Explore PhD Topics →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Thrusts & Laboratories Preview -->
+  <section class="site-section bg-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Research Excellence</span>
+        <h2 class="section-title">Specialized Research Facilities</h2>
+        <p class="section-subtitle">Our laboratories address societal challenges in groundwater security, ancient river
+          dynamics, hazard mitigation, and energy systems.</p>
+      </div>
+
+      <div class="card-grid-3">
+        <div class="lab-card">
+          <img src="assets/REEFS.jpg" alt="REEFS Laboratory" class="lab-card-img">
+          <div class="lab-card-body">
+            <div class="lab-card-pi">PI: Prof. Pankaj Khanna</div>
+            <h3 class="lab-card-title">REEFS Lab (Carbonate & Coastal Geology)</h3>
+            <p class="lab-card-desc">Investigating carbonate sedimentology, sea-level changes, coral reef evolution, and
+              reservoir characterization.</p>
+            <div class="lab-equipment-tags">
+              <span class="lab-tag">Stereo Microscopes</span>
+              <span class="lab-tag">Thin Section Lab</span>
+              <span class="lab-tag">Carbonate Petrography</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lab-card">
+          <img src="assets/MSA.png" alt="Geoarchaeology Facility" class="lab-card-img">
+          <div class="lab-card-body">
+            <div class="lab-card-pi">PI: Prof. V.N. Prabhakar</div>
+            <h3 class="lab-card-title">MSA</h3>
+            <p class="lab-card-desc">Ceramic Petrology, Culinary Archaeology, Geospatial Archaeology</p>
+            <div class="lab-equipment-tags">
+              <span class="lab-tag">Lithic Use Wear Analysis</span>
+              <span class="lab-tag">Palaeo-environmental reconstruction</span>
+              <span class="lab-tag">Landscape Archaeology</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lab-card">
+          <img src="assets/waterclimatelab.jpeg" alt="Hydro-Climate Research" class="lab-card-img">
+          <div class="lab-card-body">
+            <div class="lab-card-pi">PI: Prof. Vimal Mishra</div>
+            <h3 class="lab-card-title">Water & Climate Lab</h3>
+            <p class="lab-card-desc">Simulating drought dynamics, extreme precipitation events, reservoir hydrologic
+              flows, and climate impacts across South Asia.</p>
+            <div class="lab-equipment-tags">
+              <span class="lab-tag">Hydrologic Simulation</span>
+              <span class="lab-tag">Remote Sensing</span>
+              <span class="lab-tag">Climate Projection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="research.html" class="nav-cta-btn">View All 8 Research Laboratories →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Geological Scroll Depth HUD Widget -->
+  <div class="depth-hud" id="depth-hud">
+    <div class="depth-hud-dot"></div>
+    <div class="depth-hud-text">
+      Strata: <span id="depth-layer">Crust / Topsoil</span> (<span id="depth-val">0m</span>)
+    </div>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>Department of Earth Sciences</h3>
-        <p>Indian Institute of Technology Gandhinagar<br>Palaj, Gandhinagar - 382355, Gujarat, India</p>
-        <p style="margin-top: 1rem; color: var(--bone);">Email: earthscience@iitgn.ac.in</p>
+  <!-- Institutional Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">Department of Earth Sciences</div>
+          <div class="footer-brand-subtitle">Indian Institute of Technology Gandhinagar</div>
+          <p style="line-height: 1.6; font-size: 0.875rem;">
+            Advancing fundamental knowledge of Earth systems and providing scientific solutions for natural hazards,
+            climate resilience, and sustainable resource management.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics & Degrees</a></li>
+            <li><a href="research.html">Research & Labs</a></li>
+            <li><a href="people.html">People Directory</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Academic Programs</h4>
+          <ul class="footer-links">
+            <li><a href="academics.html">M.Sc. Earth Sciences</a></li>
+            <li><a href="academics.html">M.Tech. Earth System Science</a></li>
+            <li><a href="academics.html">Ph.D. Earth Sciences</a></li>
+            <li><a href="academics.html">Postdoctoral Research</a></li>
+            <li><a href="academics.html">Fieldwork Training</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Information</h4>
+          <p style="line-height: 1.6; font-size: 0.875rem; margin-bottom: 0.75rem;">
+            📍 Academic Block 5, IIT Gandhinagar<br>
+            Palaj, Gandhinagar, Gujarat - 382355
+          </p>
+          <p style="line-height: 1.6; font-size: 0.875rem;">
+            📧 earthsciences@iitgn.ac.in<br>
+            📞 +91 79 2395 2400
+          </p>
+        </div>
       </div>
 
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Department</a></li>
-          <li><a href="academics.html">Academics</a></li>
-          <li><a href="research.html">Research Labs</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <div>© 2026 Department of Earth Sciences, IIT Gandhinagar. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="https://iitgn.ac.in" target="_blank">IITGN Official Site</a>
+          <a href="contact.html">Location Map</a>
+          <a href="people.html">Faculty Profiles</a>
+        </div>
       </div>
-
-      <div class="footer-col">
-        <h4>People</h4>
-        <ul>
-          <li><a href="people.html">Faculty Directory</a></li>
-          <li><a href="people.html">M.Tech Students</a></li>
-          <li><a href="people.html">PhD Scholars</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="gallery.html">Photo Gallery</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="https://www.iitgn.ac.in" target="_blank">IITGN Main Portal</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 Department of Earth Sciences, Indian Institute of Technology Gandhinagar. All Rights Reserved.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

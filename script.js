@@ -1,136 +1,114 @@
-/* ==========================================================================
-   Department of Earth Sciences | IIT Gandhinagar
-   Interactive Logic: Scroll Depth HUD, Filters, Lightbox Modal
-   ========================================================================== */
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. DYNAMIC SUBTERRANEAN DEPTH HUD TRACKER
-  const depthHudVal = document.getElementById('depth-val');
-  const depthHudLayer = document.getElementById('depth-layer');
-  
-  const layers = [
-    { threshold: 0.1, name: 'Topsoil & Atmosphere', depth: '0m' },
-    { threshold: 0.25, name: 'Alluvial Sediments', depth: '150m' },
-    { threshold: 0.45, name: 'Upper Crust Bedrock', depth: '850m' },
-    { threshold: 0.65, name: 'Deep Metamorphic Rock', depth: '2,100m' },
-    { threshold: 0.85, name: 'Basaltic Mantle Zone', depth: '3,800m' },
-    { threshold: 1.0, name: 'Magma Core Layer', depth: '5,000m+' }
-  ];
+  // 1. Dynamic Geological Depth Gauge HUD Calculation
+  const depthValEl = document.getElementById('depth-val');
+  const depthLayerEl = document.getElementById('depth-layer');
 
-  window.addEventListener('scroll', () => {
-    const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-    const currentLayer = layers.find(l => scrollPercent <= l.threshold) || layers[layers.length - 1];
-    
-    if (depthHudVal && depthHudLayer) {
-      depthHudVal.textContent = currentLayer.depth;
-      depthHudLayer.textContent = currentLayer.name;
+  if (depthValEl && depthLayerEl) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = docHeight > 0 ? scrollTop / docHeight : 0;
+
+      // Geological depth scale up to 4000 meters
+      const depthMeters = Math.round(scrollPercent * 4000);
+      depthValEl.textContent = `${depthMeters.toLocaleString()}m`;
+
+      if (depthMeters < 500) {
+        depthLayerEl.textContent = 'Crust / Topsoil';
+      } else if (depthMeters < 1500) {
+        depthLayerEl.textContent = 'Upper Lithosphere';
+      } else if (depthMeters < 2800) {
+        depthLayerEl.textContent = 'Lower Sedimentary Strata';
+      } else {
+        depthLayerEl.textContent = 'Deep Mantle Bedrock';
+      }
+    });
+  }
+
+  // 2. People Directory Filtering & Search Logic
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const searchInput = document.getElementById('people-search');
+  const personCards = document.querySelectorAll('.person-card');
+
+  if (personCards.length > 0) {
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    const filterCards = () => {
+      personCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const text = card.textContent.toLowerCase();
+
+        const matchesFilter = (currentFilter === 'all' || category === currentFilter);
+        const matchesSearch = searchQuery === '' || text.includes(searchQuery);
+
+        if (matchesFilter && matchesSearch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    };
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.getAttribute('data-filter');
+        filterCards();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        filterCards();
+      });
     }
 
-    // Active nav link highlighting
-    const sections = document.querySelectorAll('section, header');
-    const navLinks = document.querySelectorAll('nav ul a');
-    
-    let currentSectionId = '';
-    sections.forEach(sec => {
-      const top = sec.offsetTop - 120;
-      if (window.scrollY >= top) {
-        currentSectionId = sec.getAttribute('id');
+    // Parse URL parameter for filter
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterParam = urlParams.get('filter');
+    if (filterParam) {
+      const targetBtn = Array.from(filterBtns).find(b => b.getAttribute('data-filter') === filterParam);
+      if (targetBtn) {
+        targetBtn.click();
       }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentSectionId}`) {
-        link.classList.add('active');
-      }
-    });
-  });
-
-  // 2. TAB SWITCHING (Academics / Research)
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetId = btn.getAttribute('data-tab');
-      const container = btn.closest('.tabs-container');
-      
-      container.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      container.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-      
-      btn.classList.add('active');
-      const targetPane = document.getElementById(targetId);
-      if (targetPane) targetPane.classList.add('active');
-    });
-  });
-
-  // 3. PEOPLE DIRECTORY FILTER & SEARCH
-  const peopleSearchInput = document.getElementById('people-search');
-  const peopleGrid = document.getElementById('people-grid');
-  const categoryFilterBtns = document.querySelectorAll('.filter-btn');
-
-  let activeCategory = 'all';
-
-  function filterPeople() {
-    const query = peopleSearchInput ? peopleSearchInput.value.toLowerCase() : '';
-    const cards = peopleGrid ? peopleGrid.querySelectorAll('.person-card') : [];
-
-    cards.forEach(card => {
-      const name = card.querySelector('.person-name').textContent.toLowerCase();
-      const role = card.querySelector('.person-role').textContent.toLowerCase();
-      const research = card.querySelector('.person-research').textContent.toLowerCase();
-      const category = card.getAttribute('data-category');
-
-      const matchesSearch = name.includes(query) || role.includes(query) || research.includes(query);
-      const matchesCategory = activeCategory === 'all' || category === activeCategory;
-
-      if (matchesSearch && matchesCategory) {
-        card.style.display = 'flex';
-      } else {
-        card.style.display = 'none';
-      }
-    });
+    }
   }
 
-  if (peopleSearchInput) {
-    peopleSearchInput.addEventListener('input', filterPeople);
-  }
+  // 3. Photo Gallery Lightbox Modal
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const lightboxModal = document.getElementById('lightbox-modal');
 
-  categoryFilterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      categoryFilterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeCategory = btn.getAttribute('data-filter');
-      filterPeople();
-    });
-  });
+  if (galleryItems.length > 0 && lightboxModal) {
+    const lightboxImg = lightboxModal.querySelector('img');
+    const lightboxCaption = lightboxModal.querySelector('.lightbox-caption');
+    const closeBtn = lightboxModal.querySelector('.lightbox-close');
 
-  // 4. LIGHTBOX MODAL FOR GALLERY
-  const galleryCards = document.querySelectorAll('.gallery-card');
-  const modalOverlay = document.getElementById('modal-overlay');
-  const modalImage = document.getElementById('modal-img');
-  const modalCaption = document.getElementById('modal-caption');
-  const modalClose = document.getElementById('modal-close');
-
-  galleryCards.forEach(card => {
-    card.addEventListener('click', () => {
-      const img = card.querySelector('img');
-      const caption = card.querySelector('.gallery-overlay').textContent;
-      
-      if (modalImage && modalCaption && modalOverlay) {
-        modalImage.src = img.src;
-        modalCaption.textContent = caption;
-        modalOverlay.classList.add('active');
-      }
-    });
-  });
-
-  if (modalClose && modalOverlay) {
-    modalClose.addEventListener('click', () => {
-      modalOverlay.classList.remove('active');
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        const caption = item.querySelector('.gallery-caption')?.textContent || '';
+        if (img) {
+          lightboxImg.src = img.src;
+          lightboxCaption.textContent = caption;
+          lightboxModal.classList.add('active');
+        }
+      });
     });
 
-    modalOverlay.addEventListener('click', (e) => {
-      if (e.target === modalOverlay) {
-        modalOverlay.classList.remove('active');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        lightboxModal.classList.remove('active');
+      });
+    }
+
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) {
+        lightboxModal.classList.remove('active');
       }
     });
   }

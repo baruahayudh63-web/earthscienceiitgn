@@ -3,387 +3,1192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>People & Directory | Earth Sciences | IIT Gandhinagar</title>
-  <meta name="description" content="Complete directory of Faculty, M.Tech Students, PhD Scholars, and Staff at IIT Gandhinagar Earth Sciences.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <title>People Directory | Earth Sciences | IIT Gandhinagar</title>
+  <meta name="description" content="Complete member directory of Faculty, M.Tech postgraduates, PhD scholars, and technical staff at IIT Gandhinagar Earth Sciences.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Floating Depth HUD -->
-  <div class="depth-hud" id="depth-hud">
-    <div class="depth-hud-icon"></div>
-    <div>
-      <div>Strata: <span id="depth-layer" style="color: var(--bone)">Topsoil</span></div>
-      <div>Depth: <span class="depth-hud-val" id="depth-val">0m</span></div>
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <span>📍 IIT Gandhinagar, Palaj, Gujarat 382355</span>
+        <span>|</span>
+        <span>📧 earthsciences@iitgn.ac.in</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="https://iitgn.ac.in" target="_blank">IITGN Portal</a>
+        <a href="academics.html">Admissions 2026</a>
+        <a href="contact.html">Reach Us</a>
+        <span class="top-bar-badge">ANRF CoE Center</span>
+      </div>
     </div>
   </div>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html" class="logo-container">
-      <img src="assets/iitgnlogo-emblem.png" alt="IIT Gandhinagar Emblem" class="logo-badge-img">
-      <div class="logo-text">
-        <span class="logo-title">Earth Sciences</span>
-        <span class="logo-sub">IIT Gandhinagar</span>
-      </div>
-    </a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="academics.html">Academics</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="people.html" class="active">People</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-    </ul>
-  </nav>
-
-  <!-- Header Banner -->
-  <header style="padding: 4rem 6% 2rem; max-width: 1200px; margin: 0 auto;">
-    <div class="eyebrow">Department Members</div>
-    <h1 style="font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1rem; color: var(--text-dark);">
-      Faculty, Students & Staff
-    </h1>
-    <p class="sub" style="font-size: 1.15rem; max-width: 70ch; opacity: 0.9;">
-      Explore our complete department directory — featuring faculty researchers, M.Tech postgraduates, doctoral scholars, and technical staff.
-    </p>
+  <!-- Institutional Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-identity">
+        <img src="assets/iitgnlogo-emblem.png" alt="IIT Gandhinagar Emblem" class="brand-logo-img">
+        <div class="brand-divider"></div>
+        <div class="brand-titles">
+          <span class="brand-dept">Earth Sciences</span>
+          <span class="brand-inst">IIT Gandhinagar</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="academics.html" class="nav-link">Academics</a>
+            <div class="nav-dropdown">
+              <a href="academics.html#msc">M.Sc. Earth Sciences</a>
+              <a href="academics.html#mtech-program">M.Tech. Earth System Science</a>
+              <a href="academics.html#phd-program">Ph.D. Earth Sciences</a>
+              <a href="academics.html#fieldwork">Fieldwork Training</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="research.html" class="nav-link">Research &amp; Labs</a>
+            <div class="nav-dropdown">
+              <a href="research.html#labs">Research Labs</a>
+              <a href="research.html#equipments">Equipment Inventory</a>
+              <a href="research.html#software">Software Inventory</a>
+              <a href="research.html#cif">Central Instrumentation Facility</a>
+              <a href="research.html#centres">Research Centres</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="people.html" class="nav-link active">People</a>
+            <div class="nav-dropdown">
+              <a href="people.html?filter=faculty">Faculty</a>
+              <a href="people.html?filter=mtech">M.Tech Students</a>
+              <a href="people.html?filter=phd">PhD Scholars</a>
+              <a href="people.html?filter=pdf">Postdoctoral Fellows</a>
+              <a href="people.html?filter=alumni">Alumni</a>
+              <a href="people.html?filter=staff">Staff</a>
+            </div>
+          </li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-cta-btn">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- People Directory Content -->
-  <section class="content text-light-theme" id="people">
-    <div class="people-controls">
-      <div class="tab-buttons" style="border: none; padding: 0;">
-        <button class="tab-btn filter-btn active" data-filter="all">All People</button>
-        <button class="tab-btn filter-btn" data-filter="faculty">Faculty</button>
-        <button class="tab-btn filter-btn" data-filter="mtech">M.Tech Students</button>
-        <button class="tab-btn filter-btn" data-filter="phd">PhD Scholars</button>
-        <button class="tab-btn filter-btn" data-filter="staff">Staff</button>
+  <!-- Page Hero Banner Template -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>People Directory</span>
       </div>
-      <input type="text" id="people-search" class="search-input" placeholder="Search by name, advisor, or area...">
+      <div class="hero-badge">
+        <span>👥</span> Department Members
+      </div>
+      <h1 class="hero-title">Faculty, Scholars, Students & Staff</h1>
+      <p class="hero-subtitle">
+        Meet our academic leaders, doctoral researchers, postgraduate engineers, and technical research personnel.
+      </p>
     </div>
+  </section>
 
-    <div class="people-grid" id="people-grid">
-      <!-- Faculty Members -->
-      <div class="person-card" data-category="faculty">
-        <img src="assets/vikrant20jain-634x423.jpg" alt="Prof. Vikrant Jain" class="person-avatar-img">
-        <div class="person-name">Prof. Vikrant Jain</div>
-        <div class="person-role">Professor</div>
-        <div class="person-research">Earth surface processes, River science, Fluvial geomorphology.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-vikrant" target="_blank" class="person-link">Faculty Profile →</a>
+  <!-- People Directory Interactive Section -->
+  <section class="site-section bg-surface">
+    <div class="container">
+
+      <!-- Interactive Filter Bar & Live Search Input -->
+      <div class="people-controls">
+        <div class="tab-buttons">
+          <button class="tab-btn filter-btn active" data-filter="all">All Members</button>
+          <button class="tab-btn filter-btn" data-filter="faculty">Faculty</button>
+          <button class="tab-btn filter-btn" data-filter="mtech">M.Tech Students</button>
+          <button class="tab-btn filter-btn" data-filter="phd">PhD Scholars</button>
+          <button class="tab-btn filter-btn" data-filter="pdf">Postdoctoral Fellows</button>
+          <button class="tab-btn filter-btn" data-filter="alumni">Alumni</button>
+          <button class="tab-btn filter-btn" data-filter="staff">Staff</button>
+        </div>
+        <input type="text" id="people-search" class="search-input" placeholder="Search by name, advisor, or research field...">
       </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/pp201-635x423.png" alt="Prof. V.N. Prabhakar" class="person-avatar-img">
-        <div class="person-name">Prof. V.N. Prabhakar</div>
-        <div class="person-role">Professor</div>
-        <div class="person-research">Archaeology of protohistorical India, Harappan civilization, Geoarchaeology.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-v_n_prabhakar" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+      <!-- Member Cards Grid -->
+      <div class="card-grid-4" id="people-grid">
+        <div class="person-card" data-category="faculty">
+          <img src="assets/vikrant20jain-634x423.jpg" alt="Prof. Vikrant Jain" class="person-avatar-img">
+          <div class="person-name">Prof. Vikrant Jain</div>
+          <div class="person-role">Professor</div>
+          <div class="person-research">Earth surface processes, River science.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-vikrant" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/pankaj20khanna2-634x423.jpg" alt="Prof. Pankaj Khanna" class="person-avatar-img">
-        <div class="person-name">Prof. Pankaj Khanna</div>
-        <div class="person-role">Associate Professor</div>
-        <div class="person-research">Modern & fossil carbonates, Carbonate sedimentology, Reservoir architecture.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-pankaj" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/img-6780.jpeg" alt="Prof. V.N. Prabhakar" class="person-avatar-img">
+          <div class="person-name">Prof. V.N. Prabhakar</div>
+          <div class="person-role">Professor</div>
+          <div class="person-research">Archaeology of protohistorical India; Harappan.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-v_n_prabhakar" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/utsav-635x423.jpg" alt="Prof. Utsav Mannu" class="person-avatar-img">
-        <div class="person-name">Prof. Utsav Mannu</div>
-        <div class="person-role">Assistant Professor</div>
-        <div class="person-research">Evolution of accretionary wedges, Subduction geodynamics, Tectonic modeling.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-utsav" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/pankaj20khanna2-634x423.jpg" alt="Prof. Pankaj Khanna" class="person-avatar-img">
+          <div class="person-name">Prof. Pankaj Khanna</div>
+          <div class="person-role">Associate Professor</div>
+          <div class="person-research">Modern and fossil carbonates, Reservoir architecture.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-pankaj" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/sharada-new-635x423.jpg" alt="Prof. Sharada C. V." class="person-avatar-img">
-        <div class="person-name">Prof. Sharada C. V.</div>
-        <div class="person-role">Assistant Professor</div>
-        <div class="person-research">Application of physical sciences in archaeology, Zooarchaeology, Isotope studies.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-sharada" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/utsav-635x423.jpg" alt="Prof. Utsav Mannu" class="person-avatar-img">
+          <div class="person-name">Prof. Utsav Mannu</div>
+          <div class="person-role">Assistant Professor</div>
+          <div class="person-research">Evolution of accretionary wedges.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-utsav" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/achyut20mishra-634x423.jpg" alt="Prof. Achyut Mishra" class="person-avatar-img">
-        <div class="person-name">Prof. Achyut Mishra</div>
-        <div class="person-role">Assistant Professor</div>
-        <div class="person-research">Geological reactive transport modeling, fluid-rock reaction simulations.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-achyut" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/sharada-new-635x423.jpg" alt="Prof. Sharada C. V." class="person-avatar-img">
+          <div class="person-name">Prof. Sharada C. V.</div>
+          <div class="person-role">Assistant Professor</div>
+          <div class="person-research">Application of sciences in archaeology.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-sharada" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/sonal20khanolkar-634x423.jpg" alt="Prof. Sonal Khanolkar" class="person-avatar-img">
-        <div class="person-name">Prof. Sonal Khanolkar</div>
-        <div class="person-role">Assistant Professor</div>
-        <div class="person-research">Micropaleontology, Biostratigraphy, Cenozoic Paleobiology.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-sonal" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/achyut20mishra-634x423.jpg" alt="Prof. Achyut Mishra" class="person-avatar-img">
+          <div class="person-name">Prof. Achyut Mishra</div>
+          <div class="person-role">Assistant Professor</div>
+          <div class="person-research">Geological modelling, fluid-rock reaction simulations.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-achyut" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/manab-635x423.png" alt="Prof. Manab Mukherjee" class="person-avatar-img">
-        <div class="person-name">Prof. Manab Mukherjee</div>
-        <div class="person-role">Assistant Professor</div>
-        <div class="person-research">Experimental rock mechanics, Strain localization, Rock failure physics.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-manab" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/sonal20khanolkar-634x423.jpg" alt="Prof. Sonal Khanolkar" class="person-avatar-img">
+          <div class="person-name">Prof. Sonal Khanolkar</div>
+          <div class="person-role">Assistant Professor</div>
+          <div class="person-research">Micropaleontology, Biostratigraphy, Paleobiology.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-sonal" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/vimal-635x423.jpg" alt="Prof. Vimal Mishra" class="person-avatar-img">
-        <div class="person-name">Prof. Vimal Mishra</div>
-        <div class="person-role">Professor</div>
-        <div class="person-research">Surface water hydrology, Climate variability, Flood & drought forecasting.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-vimal" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/manab-635x423.png" alt="Prof. Manab Mukherjee" class="person-avatar-img">
+          <div class="person-name">Prof. Manab Mukherjee</div>
+          <div class="person-role">Assistant Professor</div>
+          <div class="person-research">Experimental rock mechanics, Strain localization.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-manab" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/0udit-635x423.jpg" alt="Prof. Udit Bhatia" class="person-avatar-img">
-        <div class="person-name">Prof. Udit Bhatia</div>
-        <div class="person-role">Associate Professor</div>
-        <div class="person-research">Physics-Guided Machine Learning for Urban Flooding & Infrastructure Resilience.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-udit" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/vimal-635x423.jpg" alt="Prof. Vimal Mishra" class="person-avatar-img">
+          <div class="person-name">Prof. Vimal Mishra</div>
+          <div class="person-role">Professor &amp; Head, ANRF CoE</div>
+          <div class="person-research">Surface water hydrology, Climate variability.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-vimal" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/cnpandey-635x423.jpg" alt="Prof. C N Pandey" class="person-avatar-img">
-        <div class="person-name">Prof. C N Pandey</div>
-        <div class="person-role">Professor of Practice</div>
-        <div class="person-research">Geospatial mapping for mangrove restoration & Coastal ecosystem management.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-cnpandey" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/0udit-635x423.jpg" alt="Prof. Udit Bhatia" class="person-avatar-img">
+          <div class="person-name">Prof. Udit Bhatia</div>
+          <div class="person-role">Associate Professor</div>
+          <div class="person-research">Physics guided machine learning for urban flooding.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-udit" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/pcpandey2-635x423.jpg" alt="Prof. Prem Chand Pandey" class="person-avatar-img">
-        <div class="person-name">Prof. Prem Chand Pandey</div>
-        <div class="person-role">Visiting Professor</div>
-        <div class="person-research">Earth Observations from Satellites, Polar remote sensing.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-pcpandey" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/cnpandey-635x423.jpg" alt="Prof. C N Pandey" class="person-avatar-img">
+          <div class="person-name">Prof. C N Pandey</div>
+          <div class="person-role">Professor of Practice</div>
+          <div class="person-research">Mapping for mangrove restoration.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-cnpandey" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/rishi-635x423.png" alt="Prof. Rishi Narain Singh" class="person-avatar-img">
-        <div class="person-name">Prof. Rishi Narain Singh</div>
-        <div class="person-role">Visiting Professor</div>
-        <div class="person-research">Geophysical and environmental mathematical modeling.</div>
-        <a href="https://iitgn.ac.in/faculty/earths/fac-rnsingh" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/pcpandey2-635x423.jpg" alt="Prof. Prem Chand Pandey" class="person-avatar-img">
+          <div class="person-name">Prof. Prem Chand Pandey</div>
+          <div class="person-role">Visiting Professor</div>
+          <div class="person-research">Earth observations from satellites.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-pcpandey" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/sk-tandon-635x423.jpg" alt="Prof. Sampat Kumar Tandon" class="person-avatar-img">
-        <div class="person-name">Prof. Sampat Kumar Tandon</div>
-        <div class="person-role">Guest Professor</div>
-        <div class="person-research">Sedimentology, Tectonics, River Science.</div>
-        <a href="https://iitgn.ac.in/faculty/guestprof/sampat_kumar_tandon" target="_blank" class="person-link">Faculty Profile →</a>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/rishi-635x423.png" alt="Prof. Rishi Narain Singh" class="person-avatar-img">
+          <div class="person-name">Prof. Rishi Narain Singh</div>
+          <div class="person-role">Visiting Professor</div>
+          <div class="person-research">Geophysical and environmental modeling.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-rnsingh" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="faculty">
-        <img src="assets/sailesh-1024x683.jpg" alt="Prof. Shailesh Nayak" class="person-avatar-img">
-        <div class="person-name">Prof. Shailesh Nayak</div>
-        <div class="person-role">Distinguished Honorary Professor</div>
-        <div class="person-research">Oceanography, Geology, Coastal hazard remote sensing.</div>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/sra00036.jpg" alt="Prof. R.D. Deshpande" class="person-avatar-img">
+          <div class="person-name">Prof. R.D. Deshpande</div>
+          <div class="person-role">Guest Professor</div>
+          <div class="person-research">Isotope hydrology, Hydrogeology.</div>
+          <a href="https://iitgn.ac.in/faculty/guestprof/rd_deshpande" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <!-- M.Tech Students -->
-      <div class="person-card" data-category="mtech">
-        <div class="person-avatar-text">KP</div>
-        <div class="person-name">Kartik Patel</div>
-        <div class="person-role">M.Tech 2024-2026</div>
-        <div class="person-research">Supervisor: Dr. Achyut Mishra — Subsurface transport & modeling.</div>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/sk-tandon-635x423.jpg" alt="Prof. Sampat Kumar Tandon" class="person-avatar-img">
+          <div class="person-name">Prof. Sampat Kumar Tandon</div>
+          <div class="person-role">Guest Professor</div>
+          <div class="person-research">Sedimentology, Tectonics, River science.</div>
+          <a href="https://iitgn.ac.in/faculty/guestprof/sampat_kumar_tandon" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="mtech">
-        <div class="person-avatar-text">SS</div>
-        <div class="person-name">Sakshi Singh</div>
-        <div class="person-role">M.Tech 2024-2026</div>
-        <div class="person-research">Supervisor: Dr. Achyut Mishra — Fluid-rock reaction dynamics.</div>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/sailesh-1024x683.jpg" alt="Prof. Shailesh Nayak" class="person-avatar-img">
+          <div class="person-name">Prof. Shailesh Nayak</div>
+          <div class="person-role">Distinguished Honorary Professor</div>
+          <div class="person-research">Oceanography, Geology and remote sensing.</div>
+          <a href="https://aws-static.iicdelhi.in/s3fs-public/2021-05/DrShaileshNayak.pdf" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="mtech">
-        <div class="person-avatar-text">SM</div>
-        <div class="person-name">Saharsh Mishra</div>
-        <div class="person-role">M.Tech 2024-2026</div>
-        <div class="person-research">Supervisor: Dr. Pankaj Khanna — Carbonate reservoir architecture.</div>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/ajith-635x423.jpg" alt="Prof. Ajithprasad. P" class="person-avatar-img">
+          <div class="person-name">Prof. Ajithprasad. P</div>
+          <div class="person-role">Guest Professor</div>
+          <div class="person-research">Quaternary environmental adaptations.</div>
+          <a href="https://iitgn.ac.in/faculty/guestprof/p_ajithprasad" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="mtech">
-        <div class="person-avatar-text">KT</div>
-        <div class="person-name">Ketan</div>
-        <div class="person-role">M.Tech 2024-2026</div>
-        <div class="person-research">Supervisor: Prof. Vimal Mishra — Hydrological modeling.</div>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/r-s-bisht-500x333.jpg" alt="Prof. R. S. Bisht" class="person-avatar-img">
+          <div class="person-name">Prof. R. S. Bisht</div>
+          <div class="person-role">Guest Professor</div>
+          <div class="person-research">Development of national monuments and administration.</div>
+          <a href="https://iitgn.ac.in/faculty/guestprof/r_s_bisht" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="mtech">
-        <div class="person-avatar-text">DE</div>
-        <div class="person-name">Devanarayanan EM</div>
-        <div class="person-role">M.Tech 2024-2026</div>
-        <div class="person-research">Supervisor: Dr. Utsav Mannu — Geodynamics & tectonic modeling.</div>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/pp201-635x423.png" alt="Prof. P.P. Joglekar" class="person-avatar-img">
+          <div class="person-name">Prof. P.P. Joglekar</div>
+          <div class="person-role">Guest Professor</div>
+          <div class="person-research">History of science &amp; tech, archaeological science.</div>
+          <a href="https://iitgn.ac.in/faculty/guestprof/p_p_joglekar" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="mtech">
-        <div class="person-avatar-text">AJ</div>
-        <div class="person-name">Anindita Jana</div>
-        <div class="person-role">M.Tech 2024-2026</div>
-        <div class="person-research">Supervisor: Dr. Utsav Mannu — Subduction zone mechanics.</div>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/unnamed2019-1024x919.jpg" alt="Prof. Rajiv Sinha" class="person-avatar-img">
+          <div class="person-name">Prof. Rajiv Sinha</div>
+          <div class="person-role">Guest Professor</div>
+          <div class="person-research">Fluvial geomorphology and sedimentology.</div>
+          <a href="https://home.iitk.ac.in/~rsinha/" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="mtech">
-        <div class="person-avatar-text">SS</div>
-        <div class="person-name">Shuvam .S</div>
-        <div class="person-role">M.Tech 2025-2027</div>
-        <div class="person-research">Earth System Science Postgraduate Scholar.</div>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/unnamed2020-1024x687.jpg" alt="Prof. K. Krishnan" class="person-avatar-img">
+          <div class="person-name">Prof. K. Krishnan</div>
+          <div class="person-role">Guest Professor</div>
+          <div class="person-research">Artefact analysis and interpretation.</div>
+          <a href="https://iitgn.ac.in/faculty/guestprof/krishnan" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="mtech">
-        <div class="person-avatar-text">SN</div>
-        <div class="person-name">Sourav Kumar Naik</div>
-        <div class="person-role">M.Tech 2025-2027</div>
-        <div class="person-research">Earth System Science Postgraduate Scholar.</div>
-      </div>
+        <div class="person-card" data-category="faculty">
+          <img src="assets/21-635x423.png" alt="Prof. Pradeep K Srivastava" class="person-avatar-img">
+          <div class="person-name">Prof. Pradeep K Srivastava</div>
+          <div class="person-role">Adjunct Professor</div>
+          <div class="person-research">Physical &amp; numerical modeling of imaging processes.</div>
+          <a href="https://iitgn.ac.in/faculty/earths/fac-pradeep" target="_blank" class="person-link">Faculty Profile →</a>
+        </div>
 
-      <div class="person-card" data-category="mtech">
-        <div class="person-avatar-text">VK</div>
-        <div class="person-name">Vedang R Kawalkar</div>
-        <div class="person-role">M.Tech 2025-2027</div>
-        <div class="person-research">Earth System Science Postgraduate Scholar.</div>
-      </div>
+        <div class="person-card" data-category="pdf">
+          <img src="assets/rahul-bailwal-postdoc.jpg" alt="Rahul Bailwal" class="person-avatar-img">
+          <div class="person-name">Rahul Bailwal</div>
+          <div class="person-role">Postdoctoral Fellow</div>
+          <div class="person-advisor">Supervisor: Dr. Achyut Mishra</div>
+          <div class="person-research">Deep and Generative ML, Sedimentary Heterogeneity</div>
+        </div>
 
-      <!-- PhD Scholars -->
-      <div class="person-card" data-category="phd">
-        <img src="assets/hiren-solanki-4.webp" alt="Hiren Solanki" class="person-avatar-img">
-        <div class="person-name">Hiren Solanki</div>
-        <div class="person-role">PhD Scholar</div>
-        <div class="person-research">Advisor: Prof. Vimal Mishra — Machine learning & climate hydrology. SARANSH 2025 Winner.</div>
-      </div>
+        <div class="person-card" data-category="pdf">
+          <img src="assets/amrutha-k-postdoc.jpg" alt="Amrutha K" class="person-avatar-img">
+          <div class="person-name">Amrutha K</div>
+          <div class="person-role">Postdoctoral Fellow</div>
+          <div class="person-advisor">Supervisor: Dr. Achyut Mishra</div>
+          <div class="person-research">ML, Critical Mineral Exploration</div>
+        </div>
 
-      <div class="person-card" data-category="phd">
-        <img src="assets/rvalli-divya.jpg" alt="R. Valli Divya" class="person-avatar-img">
-        <div class="person-name">R. Valli Divya</div>
-        <div class="person-role">PhD Scholar</div>
-        <div class="person-research">Advisor: Prof. Vikrant Jain — Diamond anvil cell planetary mineralogy. Nature Reviews author.</div>
-      </div>
+        <div class="person-card" data-category="pdf">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Dr. Salim</div>
+          <div class="person-role">Postdoctoral Fellow</div>
+          <div class="person-advisor">Supervisor: Dr. Pankaj Khanna</div>
+        </div>
 
-      <div class="person-card" data-category="phd">
-        <div class="person-avatar-text">AK</div>
-        <div class="person-name">Ayush Kranti</div>
-        <div class="person-role">PhD Scholar</div>
-        <div class="person-research">Advisor: Dr. Achyut Mishra — Subsurface fluid transport modeling.</div>
-      </div>
+        <div class="person-card" data-category="pdf">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Dr. Hema</div>
+          <div class="person-role">Postdoctoral Fellow</div>
+          <div class="person-advisor">Supervisor: Dr. Pankaj Khanna</div>
+        </div>
 
-      <div class="person-card" data-category="phd">
-        <div class="person-avatar-text">AK</div>
-        <div class="person-name">Akhil</div>
-        <div class="person-role">PhD Scholar</div>
-        <div class="person-research">Advisor: Dr. Achyut Mishra — Reactive transport simulations.</div>
-      </div>
+        <div class="person-card" data-category="pdf">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Dr. Bhavna Ahlawat</div>
+          <div class="person-role">Postdoctoral Fellow</div>
+          <div class="person-advisor">Supervisor: Dr. Sharda C.V.</div>
+        </div>
 
-      <div class="person-card" data-category="phd">
-        <div class="person-avatar-text">TR</div>
-        <div class="person-name">Trinanyan</div>
-        <div class="person-role">PhD Scholar</div>
-        <div class="person-research">Advisor: Dr. Achyut Mishra — Pore network physics.</div>
-      </div>
+        <div class="person-card" data-category="pdf">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Dr. Abhishek Dixit</div>
+          <div class="person-role">Postdoctoral Fellow</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
 
-      <div class="person-card" data-category="phd">
-        <div class="person-avatar-text">SD</div>
-        <div class="person-name">Subham Dutta</div>
-        <div class="person-role">PhD Scholar</div>
-        <div class="person-research">Advisor: Dr. Sonal Khanolkar — Cenozoic micropaleontology & microfossils.</div>
-      </div>
+        <div class="person-card" data-category="pdf">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Dr. Sharad Babu Pillai</div>
+          <div class="person-role">Postdoctoral Fellow</div>
+        </div>
 
-      <div class="person-card" data-category="phd">
-        <div class="person-avatar-text">SG</div>
-        <div class="person-name">Sumit Ghosh</div>
-        <div class="person-role">PhD Scholar</div>
-        <div class="person-research">Advisor: Prof. Vikrant Jain — Fluvial geomorphology & river sediment budgets.</div>
-      </div>
+        <div class="person-card" data-category="pdf">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Dr. Malavika Chatterjee</div>
+          <div class="person-role">Postdoctoral Fellow</div>
+          <div class="person-advisor">Supervisor: Dr. Sharda C.V.</div>
+        </div>
 
-      <div class="person-card" data-category="phd">
-        <div class="person-avatar-text">SS</div>
-        <div class="person-name">Sumit Singh</div>
-        <div class="person-role">PhD Scholar</div>
-        <div class="person-research">Advisor: Dr. Utsav Mannu — Geodynamic subduction zone numerical modeling.</div>
-      </div>
+        <div class="person-card" data-category="pdf">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Dr. Sikha Rai</div>
+          <div class="person-role">Postdoctoral Fellow</div>
+          <div class="person-advisor">Supervisor: Prof. V.N. Prabhakar</div>
+        </div>
 
-      <div class="person-card" data-category="phd">
-        <div class="person-avatar-text">SK</div>
-        <div class="person-name">Saikat</div>
-        <div class="person-role">PhD Scholar</div>
-        <div class="person-research">Advisor: Dr. Pankaj Khanna — Carbonate sedimentology.</div>
-      </div>
+        <div class="person-card" data-category="pdf">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Dr. Shravan Kumar</div>
+          <div class="person-role">Postdoctoral Fellow</div>
+          <div class="person-advisor">Supervisor: Dr. Utsav Mannu</div>
+        </div>
 
-      <div class="person-card" data-category="phd">
-        <div class="person-avatar-text">DB</div>
-        <div class="person-name">Debasmita</div>
-        <div class="person-role">PhD Scholar</div>
-        <div class="person-research">Advisor: Dr. Pankaj Khanna — Carbonate reservoir architecture.</div>
-      </div>
+        <div class="person-card" data-category="pdf">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Dr. Deveshwar Prakash Mishra</div>
+          <div class="person-role">Postdoctoral Fellow</div>
+          <div class="person-advisor">Supervisor: Dr. Sonal Khanolkar</div>
+        </div>
 
-      <!-- Staff -->
-      <div class="person-card" data-category="staff">
-        <div class="person-avatar-text">JP</div>
-        <div class="person-name">Mr. Jayesh R. Prajapati</div>
-        <div class="person-role">Junior Lab Attendant</div>
-        <div class="person-research">Department Laboratory Operations & Equipment Support.</div>
-      </div>
+        <div class="person-card" data-category="mtech">
+          <img src="assets/kartik-patel-mtech.jpg" alt="Kartik Patel" class="person-avatar-img">
+          <div class="person-name">Kartik Patel</div>
+          <div class="person-role">M.Tech Scholar (2024-26)</div>
+          <div class="person-advisor">Supervisor: Dr. Achyut Mishra</div>
+        </div>
 
-      <div class="person-card" data-category="staff">
-        <div class="person-avatar-text">AS</div>
-        <div class="person-name">Mr. Ashutosh Shukla</div>
-        <div class="person-role">Junior Lab Assistant</div>
-        <div class="person-research">Geoscience Instrumentation & Sample Preparation Maintenance.</div>
+        <div class="person-card" data-category="mtech">
+          <img src="assets/sakshi-singh-mtech.jpg" alt="Sakshi Singh" class="person-avatar-img">
+          <div class="person-name">Sakshi Singh</div>
+          <div class="person-role">M.Tech Scholar (2024-26)</div>
+          <div class="person-advisor">Supervisor: Dr. Achyut Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="mtech">
+          <img src="assets/saharsh-mishra-mtech.jpg" alt="Saharsh Mishra" class="person-avatar-img">
+          <div class="person-name">Saharsh Mishra</div>
+          <div class="person-role">M.Tech Scholar (2024-26)</div>
+          <div class="person-advisor">Supervisor: Dr. Pankaj Khanna</div>
+        </div>
+
+        <div class="person-card" data-category="mtech">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Ketan</div>
+          <div class="person-role">M.Tech Scholar (2024-26)</div>
+          <div class="person-advisor">Supervisor: Prof. Vimal Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="mtech">
+          <img src="assets/devanarayanan-em-mtech.jpg" alt="Devanarayanan EM" class="person-avatar-img">
+          <div class="person-name">Devanarayanan EM</div>
+          <div class="person-role">M.Tech Scholar (2024-26)</div>
+          <div class="person-advisor">Supervisor: Dr. Utsav Mannu</div>
+        </div>
+
+        <div class="person-card" data-category="mtech">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Anindita Jana</div>
+          <div class="person-role">M.Tech Scholar (2024-26)</div>
+          <div class="person-advisor">Supervisor: Dr. Utsav Mannu</div>
+        </div>
+
+        <div class="person-card" data-category="mtech">
+          <img src="assets/shuvam-s-mtech.jpg" alt="Shuvam S" class="person-avatar-img">
+          <div class="person-name">Shuvam S</div>
+          <div class="person-role">M.Tech Scholar (2025-27)</div>
+        </div>
+
+        <div class="person-card" data-category="mtech">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Sourav Kumar Naik</div>
+          <div class="person-role">M.Tech Scholar (2025-27)</div>
+        </div>
+
+        <div class="person-card" data-category="mtech">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Vedang R Kawalkar</div>
+          <div class="person-role">M.Tech Scholar (2025-27)</div>
+        </div>
+
+        <div class="person-card" data-category="mtech">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Harshil Bhavsar</div>
+          <div class="person-role">M.Tech Scholar (2025-27)</div>
+        </div>
+
+        <div class="person-card" data-category="mtech">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Rajat Nirwan</div>
+          <div class="person-role">M.Tech Scholar (2025-27)</div>
+        </div>
+
+        <div class="person-card" data-category="mtech">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Omkar Patil</div>
+          <div class="person-role">M.Tech Scholar (2025-27)</div>
+        </div>
+
+        <div class="person-card" data-category="mtech">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Arihant Jain</div>
+          <div class="person-role">M.Tech Scholar (2025-27)</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/ayush-kranti-phd.jpg" alt="Ayush Kranti" class="person-avatar-img">
+          <div class="person-name">Ayush Kranti</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Achyut Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/akhil-phd.jpg" alt="Akhil" class="person-avatar-img">
+          <div class="person-name">Akhil</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Achyut Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/trinanyan-adhyapok-phd.jpg" alt="Trinanyan" class="person-avatar-img">
+          <div class="person-name">Trinanyan</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Achyut Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/subham-dutta-phd.jpg" alt="Subham Dutta" class="person-avatar-img">
+          <div class="person-name">Subham Dutta</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Sonal Khanolkar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/sumit-ghosh-phd.jpg" alt="Sumit Ghosh" class="person-avatar-img">
+          <div class="person-name">Sumit Ghosh</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/sumit-singh-phd.jpg" alt="Sumit Singh" class="person-avatar-img">
+          <div class="person-name">Sumit Singh</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Utsav Mannu</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/saikat-phd.jpg" alt="Saikat" class="person-avatar-img">
+          <div class="person-name">Saikat</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Pankaj Khanna</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/debasmita-phd.jpg" alt="Debasmita" class="person-avatar-img">
+          <div class="person-name">Debasmita</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Pankaj Khanna</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/pornima-phd.jpg" alt="Pornima" class="person-avatar-img">
+          <div class="person-name">Pornima</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Pankaj Khanna</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/yash-deotale-phd.jpg" alt="Yash Deotale" class="person-avatar-img">
+          <div class="person-name">Yash Deotale</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Achyut Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/suvendu-phd.jpg" alt="Suvendu" class="person-avatar-img">
+          <div class="person-name">Suvendu</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Achyut Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/satish-phd.jpg" alt="Satish" class="person-avatar-img">
+          <div class="person-name">Satish</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/varshit-dalicha-phd.jpg" alt="Varshit Dalicha" class="person-avatar-img">
+          <div class="person-name">Varshit Dalicha</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/akhila-a-phd.jpg" alt="Akhila A" class="person-avatar-img">
+          <div class="person-name">Akhila A</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vimal Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/shaina-kapoor-phd.jpg" alt="Shaina Kapoor" class="person-avatar-img">
+          <div class="person-name">Shaina Kapoor</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/hiren-solanki-4.webp" alt="Hiren Solanki" class="person-avatar-img">
+          <div class="person-name">Hiren Solanki</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vimal Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Ritaja Roy</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vimal Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/deoyani-shelke-phd.jpg" alt="Deoyani Shelke" class="person-avatar-img">
+          <div class="person-name">Deoyani Shelke</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Utsav Mannu</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/nikita-karnatak-phd.jpg" alt="Nikita Karnatak" class="person-avatar-img">
+          <div class="person-name">Nikita Karnatak</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Gayathri Vangala</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vimal Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/manjari-sharma-phd.jpg" alt="Manjari Sharma" class="person-avatar-img">
+          <div class="person-name">Manjari Sharma</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. V.N. Prabhakar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Sunny Kumar Jha</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/bhavani-j-phd.jpg" alt="Bhavani J" class="person-avatar-img">
+          <div class="person-name">Bhavani J</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. V.N. Prabhakar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Priyamvada Dubey</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/falguni-tailor-phd.jpg" alt="Falguni Tailor" class="person-avatar-img">
+          <div class="person-name">Falguni Tailor</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. C.N. Pandey</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/vivek-kumar-bind-phd.jpg" alt="Vivek Kumar Bind" class="person-avatar-img">
+          <div class="person-name">Vivek Kumar Bind</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/shri-parvathi-s-phd.jpg" alt="Shri Parvathi S" class="person-avatar-img">
+          <div class="person-name">Shri Parvathi S</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Pankaj Khanna</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Ankita Pattanayak</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Afia Khan</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Pankaj Khanna</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Adrija Dutta</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Udit Bhatia</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Gulshan Kumar</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/mahesh-bhardwaj-phd.jpg" alt="Mahesh Bhardwaj" class="person-avatar-img">
+          <div class="person-name">Mahesh Bhardwaj</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vimal Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Parvee</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Utsav Mannu</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Shardha Menon</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Pankaj Khanna</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/anukritika-raj-phd.jpg" alt="Anukritika Raj" class="person-avatar-img">
+          <div class="person-name">Anukritika Raj</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">M Niranjannaik</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vimal Mishra</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Anish Kumar S</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Sonal Khanolkar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/jagroop-singh-phd.jpg" alt="Jagroop Singh" class="person-avatar-img">
+          <div class="person-name">Jagroop Singh</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Utsav Mannu</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/omakar-singh-phd.jpg" alt="Omakar Singh" class="person-avatar-img">
+          <div class="person-name">Omakar Singh</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Utsav Mannu</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/shikha-sharma-phd.jpg" alt="Shikha Sharma" class="person-avatar-img">
+          <div class="person-name">Shikha Sharma</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Utsav Mannu</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Shalini Singh</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Virat Upadhyay</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Utsav Mannu</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/abhijit-vijay-ambhore-phd.jpg" alt="Abhijit Vijay Ambhore" class="person-avatar-img">
+          <div class="person-name">Abhijit Vijay Ambhore</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Prof. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Hambili Hasnu</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Sonal Khanolkar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/supratim-roy-phd.jpg" alt="Supratim Roy" class="person-avatar-img">
+          <div class="person-name">Supratim Roy</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Sonal Khanolkar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/sambaran-hazra-phd.jpg" alt="Sambaran Hazra" class="person-avatar-img">
+          <div class="person-name">Sambaran Hazra</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Sonal Khanolkar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/induja-s-phd.jpg" alt="Induja S" class="person-avatar-img">
+          <div class="person-name">Induja S</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Pankaj Khanna</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <img src="assets/rvalli-divya.jpg" alt="R Valli Divya" class="person-avatar-img">
+          <div class="person-name">R Valli Divya</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+          <div class="person-advisor">Supervisor: Dr. Vikrant Jain</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Indramani Tripathi</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Alok Thakur</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Anuj Kushwaha</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Rishab Sahu</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Ankita Patnaik</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Himakshi Sharmah</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Subhra Banerjee</div>
+          <div class="person-role">PhD Doctoral Scholar</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Debojyoti</div>
+          <div class="person-role">PhD Scholar</div>
+          <div class="person-advisor">ISRO SAC PhD Programme</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Anurag Gupta</div>
+          <div class="person-role">PhD Scholar</div>
+          <div class="person-advisor">ISRO SAC PhD Programme</div>
+        </div>
+
+        <div class="person-card" data-category="phd">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔬</div>
+          <div class="person-name">Aswathy Krishna</div>
+          <div class="person-role">PhD Scholar</div>
+          <div class="person-advisor">ISRO SAC PhD Programme</div>
+        </div>
+
+        <div class="person-card" data-category="staff">
+          <img src="assets/jayesh-prajapati-staff.jpg" alt="Jayesh R. Prajapati" class="person-avatar-img">
+          <div class="person-name">Jayesh R. Prajapati</div>
+          <div class="person-role">Junior Lab Attendant</div>
+          <div class="person-research"><a href="mailto:jayesh.prajapati@iitgn.ac.in">jayesh.prajapati@iitgn.ac.in</a></div>
+        </div>
+
+        <div class="person-card" data-category="staff">
+          <img src="assets/ashutosh-shukla-staff.jpg" alt="Ashutosh Shukla" class="person-avatar-img">
+          <div class="person-name">Ashutosh Shukla</div>
+          <div class="person-role">Junior Lab Assistant</div>
+          <div class="person-research"><a href="mailto:ashutosh.shukla@iitgn.ac.in">ashutosh.shukla@iitgn.ac.in</a></div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Avinash Mishra</div>
+          <div class="person-role">PGDIIT Alumnus/Alumna</div>
+          <div class="person-research">Project Associate — NIT Rourkela</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Suchika Yadav</div>
+          <div class="person-role">PGDIIT Alumnus/Alumna</div>
+          <div class="person-research">PhD — IIT Bombay</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Dakshata S. B.</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Gorakala Avinash</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">PhD — IITGN</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Soumyadeep Ghosh</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">PhD — UTSA</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Sumit K. Sonu</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">UAV Engineer — EnerComp Solutions</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Swami Ahirwar</div>
+          <div class="person-role">PGDIIT Alumnus/Alumna</div>
+          <div class="person-research">Assistant Engineer — MP Electricity Board</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Girivendra Yadav</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">PhD — IIT Bombay</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Makwana G. K.</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">PhD — MSU Baroda</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Hiren R. Solanki</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">PhD Scholar — IITGN</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Omkar</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">PhD — IITGN</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Akshay Rajeev</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">PhD — Cornell University</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Anant Misra</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">PhD — UMass Boston</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Arindom Gogoi</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">SRF — CSIR-NGRI</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Debashis Nath</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Himanshu</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Kiran B. Dhangar</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">Senior Video Editor — Indian Farmer</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Nitin B. Jain</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">Data Scientist — UBS</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Samrat Patni</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">Engineering Geologist — SMEC</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Subhashis Mishra</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Alok K. Thakur</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">PhD — IITGN</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Anushka Vashistha</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">PhD — IIT Guwahati</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Indra M. Tripathi</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">PhD — IITGN</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Rajput Akashsingh</div>
+          <div class="person-role">PGDIIT Alumnus/Alumna</div>
+          <div class="person-research">Geological Consultant — Deloitte</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Shivangi Singh</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">Senior Advisor — Gallagher Re</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Tanya Shukla</div>
+          <div class="person-role">M.Tech Alumnus/Alumna</div>
+          <div class="person-research">Postdoc Scholar — Oregon State Univ.</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Nikita Karnatak</div>
+          <div class="person-role">PhD Alumnus/Alumna</div>
+          <div class="person-research">Research Scholar — IITGN</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Shekhar S. Goyal</div>
+          <div class="person-role">PhD Alumnus/Alumna</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Shanti S. Mahto</div>
+          <div class="person-role">PhD Alumnus/Alumna</div>
+          <div class="person-research">Assistant Professor — Central Univ. Jharkhand</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Anukesh Ambika</div>
+          <div class="person-role">PhD Alumnus/Alumna</div>
+          <div class="person-research">Scientific Researcher — Oak Ridge Lab</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Pritha Chakravarti</div>
+          <div class="person-role">PhD Alumnus/Alumna</div>
+          <div class="person-research">Sector Head — Tarutium Global</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Akarsh A.</div>
+          <div class="person-role">PhD Alumnus/Alumna</div>
+          <div class="person-research">Scientist — CSIR-NGRI</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Ravi Kant Prasad</div>
+          <div class="person-role">PhD Alumnus/Alumna</div>
+          <div class="person-research">Assistant Professor — RRSD College</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Shantamoy Guha</div>
+          <div class="person-role">PhD Alumnus/Alumna</div>
+          <div class="person-research">Researcher — Univ. of Ostrava</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <img src="assets/rahul-kaushal-3.webp" alt="Rahul K. Kaushal" class="person-avatar-img">
+          <div class="person-name">Rahul K. Kaushal</div>
+          <div class="person-role">PhD Alumnus/Alumna</div>
+          <div class="person-research">Postdoc Researcher — Colorado Mines</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Sonam</div>
+          <div class="person-role">PhD Alumnus/Alumna</div>
+          <div class="person-research">Assistant Professor — Mahindra Univ.</div>
+        </div>
+
+        <div class="person-card" data-category="alumni">
+          <div class="person-avatar-img" style="background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎓</div>
+          <div class="person-name">Ramendra Sahoo</div>
+          <div class="person-role">PhD Alumnus/Alumna</div>
+          <div class="person-research">Scientist — CSIR-NGRI</div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Sediment Strip -->
-  <div class="sediment-strip" aria-hidden="true">
-    <svg class="rock-decor r1" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="10,60 5,35 25,15 55,10 80,20 95,45 85,65 50,68 20,65"/>
-    </svg>
-    <svg class="rock-decor r2" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="8,55 10,30 35,12 65,15 88,35 78,60 45,65 18,62"/>
-    </svg>
+  <!-- Geological Scroll Depth HUD Widget -->
+  <div class="depth-hud" id="depth-hud">
+    <div class="depth-hud-dot"></div>
+    <div class="depth-hud-text">
+      Strata: <span id="depth-layer">Crust / Topsoil</span> (<span id="depth-val">0m</span>)
+    </div>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>Department of Earth Sciences</h3>
-        <p>Indian Institute of Technology Gandhinagar<br>Palaj, Gandhinagar - 382355, Gujarat, India</p>
+  <!-- Institutional Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">Department of Earth Sciences</div>
+          <div class="footer-brand-subtitle">Indian Institute of Technology Gandhinagar</div>
+          <p style="line-height: 1.6; font-size: 0.875rem;">
+            Advancing fundamental knowledge of Earth systems and providing scientific solutions for natural hazards, climate resilience, and sustainable resource management.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics & Degrees</a></li>
+            <li><a href="research.html">Research & Labs</a></li>
+            <li><a href="people.html">People Directory</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Academic Programs</h4>
+          <ul class="footer-links">
+            <li><a href="academics.html">M.Sc. Earth Sciences</a></li>
+            <li><a href="academics.html">M.Tech. Earth System Science</a></li>
+            <li><a href="academics.html">Ph.D. Earth Sciences</a></li>
+            <li><a href="academics.html">Postdoctoral Research</a></li>
+            <li><a href="academics.html">Fieldwork Training</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Information</h4>
+          <p style="line-height: 1.6; font-size: 0.875rem; margin-bottom: 0.75rem;">
+            📍 Academic Block 5, IIT Gandhinagar<br>
+            Palaj, Gandhinagar, Gujarat - 382355
+          </p>
+          <p style="line-height: 1.6; font-size: 0.875rem;">
+            📧 earthsciences@iitgn.ac.in<br>
+            📞 +91 79 2395 2400
+          </p>
+        </div>
       </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="academics.html">Academics</a></li>
-          <li><a href="research.html">Research</a></li>
-        </ul>
+
+      <div class="footer-bottom">
+        <div>© 2026 Department of Earth Sciences, IIT Gandhinagar. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="https://iitgn.ac.in" target="_blank">IITGN Official Site</a>
+          <a href="contact.html">Location Map</a>
+          <a href="people.html">Faculty Profiles</a>
+        </div>
       </div>
-      <div class="footer-col">
-        <h4>People</h4>
-        <ul>
-          <li><a href="people.html">Faculty Directory</a></li>
-          <li><a href="people.html">M.Tech Students</a></li>
-          <li><a href="people.html">PhD Scholars</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="gallery.html">Photo Gallery</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Department of Earth Sciences, Indian Institute of Technology Gandhinagar.</p>
     </div>
   </footer>
 
