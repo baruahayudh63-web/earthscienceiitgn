@@ -1,31 +1,6 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Dynamic Geological Depth Gauge HUD Calculation
-  const depthValEl = document.getElementById('depth-val');
-  const depthLayerEl = document.getElementById('depth-layer');
-
-  if (depthValEl && depthLayerEl) {
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = docHeight > 0 ? scrollTop / docHeight : 0;
-
-      // Geological depth scale up to 4000 meters
-      const depthMeters = Math.round(scrollPercent * 4000);
-      depthValEl.textContent = `${depthMeters.toLocaleString()}m`;
-
-      if (depthMeters < 500) {
-        depthLayerEl.textContent = 'Crust / Topsoil';
-      } else if (depthMeters < 1500) {
-        depthLayerEl.textContent = 'Upper Lithosphere';
-      } else if (depthMeters < 2800) {
-        depthLayerEl.textContent = 'Lower Sedimentary Strata';
-      } else {
-        depthLayerEl.textContent = 'Deep Mantle Bedrock';
-      }
-    });
-  }
 
   // 2. People Directory Filtering & Search Logic
   const filterBtns = document.querySelectorAll('.filter-btn');
