@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // 2. People Directory Filtering & Search Logic
